@@ -1,0 +1,45 @@
+1)скачать Django
+https://docs.djangoproject.com/en/4.0/topics/install/#installing-official-release
+
+py -m pip install Django
+2)создать "проект" (в папке с проектами Django)
+django-admin startproject myfirst
+
+3)запустить локальный сервер (* сначала нужно,в cmd, перейти в проект myfirst)
+python manage.py runserver
+*сайт запуститься по адресу (от же localhost) :
+http://127.0.0.1:8000/ 
+
+4)создать "приложение" "articles"
+python manage.py startapp articles
+
+*далее создать в "myfirst" папку "apps" и кинуть папку "articles" туда !!
+
+5)создать "миграцию" (* сначала нужно,в cmd, перейти в проект myfirst)
+python manage.py makemigrations articles
+
+*перед этим нужно добавить в settigs.py (в поле INSTALLED_APPS=[])
+'articles.apps.ArticlesConfig',
+
+*Чтобы посмотреть какой SQL код Dj сгенерирует чтобы применить данные миграции к БД :
+python manage.py sqlmigrate articles 0001
+
+6)применить миграцию к БД
+python manage.py migrate
+
+7)вызвать ОРМ Django (это API Базы Данных) :
+python manage.py shell
+
+8)создать учётную запись "Админ": 
+python manage.py createsuperuser
+
+
+
+
+
+
+
+
+
+
+
