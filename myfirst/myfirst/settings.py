@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
+    #'grappelli',
     'articles.apps.ArticlesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,7 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request',
+               # 'django.template.context_processors.request',
             ],
         },
     },
